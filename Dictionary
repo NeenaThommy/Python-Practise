@@ -1,0 +1,69 @@
+# Create a dictionary of 3 students and their marks. Print only the names.
+dict = {"neena" : 34,"antony" : 50,"alen" : 45}
+print(dict.keys())
+
+#Given a dictionary, print all key–value pairs using a loop.
+emp = {"id": 101, "name": "Neena", "dept": "IT"}
+
+for key,value in emp.items():
+    print(key,":",value)
+
+# Add a new key "salary" to a dictionary.
+emp["salary"] = 10000
+print(emp)
+
+#Remove a key from a dictionary using pop().
+emp.pop("salary")
+print(emp)
+
+#Merge two dictionaries using update().
+
+d1 = {"a": 10, "b": 20}
+d2 = {"c": 30}
+
+d1.update(d2)
+print(d1)
+
+#Convert two lists into a dictionary using comprehension.
+keys = ["name", "age"]
+values = ["Neena", 25]
+
+result = {keys[i]:values[i] for i in range(len(keys))}
+print(result)
+
+# result = {keys[i]: values[i] for i in range(len(keys))} ---- syntax of dict comprehension
+
+#Remove duplicates from a list using a set (simple method).
+a = [1,2,32,1,1,1,1,2]
+b = set(a)
+print(b)
+
+#Find the union, intersection, and difference of two sets.
+s1 = {1,2,3,4}
+s2 = {3,4,5}
+print(s1^s2)
+print ( s1.union(s2))
+print(s1 - s2)
+
+# Given a sentence, count frequency of each word using a dictionary.
+sentence = "Python is more powerful and python is mostly using"
+
+words = sentence.lower().split()
+freq = {}
+
+for word in words:
+    if word in freq:
+        freq[word] +=1
+    else:
+        freq[word] = 1
+print(freq)
+
+#Create a dictionary using dictionary comprehension:
+
+#Keys → numbers 1 to 5
+#Values → squares of numbers
+
+# {1:1, 2:4, 3:9, 4:16, 5:25}
+
+square = {x:x*x for x in range(1,5)}
+print(square)
